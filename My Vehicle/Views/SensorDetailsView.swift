@@ -243,9 +243,7 @@ struct SensorDetailsView: View {
         }
         // show drop down selection
         .modalView(isPresented: $isShowingSelection) {
-            let sensorType = SensorType(rawValue: sensor.sensorType)
-            
-            DropdownSelectionView(isPresenting: self.$isShowingSelection, value: .constant(sensorType), data: SensorType.allCases) { item in
+            DropdownSelectionView(isPresenting: self.$isShowingSelection, value: $sensorType, data: SensorType.allCases) { item in
                 Text(item.toReadableString())
             } selectionEvent: { value in
                 self.sensorType = value
