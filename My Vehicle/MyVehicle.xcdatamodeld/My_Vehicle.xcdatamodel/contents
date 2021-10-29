@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RequestConfig" representedClassName="RequestConfig" syncable="YES" codeGenerationType="class">
+        <attribute name="messageType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mobileAppID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vID" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Sensor" representedClassName="Sensor" syncable="YES" codeGenerationType="class">
+        <attribute name="macAddress" optional="YES" attributeType="String"/>
+        <attribute name="sensorLocation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sensorName" optional="YES" attributeType="String"/>
+        <attribute name="sensorType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sensorZone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="serialNumber" optional="YES" attributeType="String"/>
+        <relationship name="vehicle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="vehicleSensors" inverseEntity="Vehicle"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="userID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="vehicle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="vehicleUsers" inverseEntity="Vehicle"/>
+    </entity>
+    <entity name="Vehicle" representedClassName="Vehicle" syncable="YES" codeGenerationType="class">
+        <attribute name="customer" optional="YES" attributeType="String"/>
+        <attribute name="mobileNumber" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="reeferSerial" optional="YES" attributeType="String"/>
+        <attribute name="vehicleID" optional="YES" attributeType="String"/>
+        <relationship name="vehicleSensors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sensor" inverseName="vehicle" inverseEntity="Sensor"/>
+        <relationship name="vehicleUsers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="vehicle" inverseEntity="User"/>
+    </entity>
+    <elements>
+        <element name="Vehicle" positionX="-189.2109375" positionY="271.78515625" width="128" height="148"/>
+        <element name="Sensor" positionX="-422.01953125" positionY="236.8046875" width="128" height="148"/>
+        <element name="RequestConfig" positionX="-54" positionY="184.96484375" width="128" height="88"/>
+        <element name="User" positionX="-31.14453125" positionY="400.10546875" width="128" height="73"/>
+    </elements>
+</model>

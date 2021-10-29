@@ -1,0 +1,67 @@
+{
+    "vehicleDetails": [
+        {
+            "vehicleID": "11224455",
+            "name": "Vehicle Name 123",
+            "reeferSerial": "ABCD14DFSAS",
+            "mobileNumber": "+353891100111",
+            "customer": "Customer XYZ"
+        },
+        {
+            "sensorDetails": [
+                {
+                    "sensorZone": 1,
+                    "sensorLocation": 3,
+                    "serialNumber": "DE:34:FE:23:3A",
+                    "macAddress": "X000A3312T",
+                    "sensorName": "Sensor 1",
+                    "sensorType": 1
+                },
+                {
+                    "sensorZone": 1,
+                    "sensorLocation": 2,
+                    "serialNumber": "3A:46:2A:A1:BB",
+                    "macAddress": "X000A3417B",
+                    "sensorName": "Sensor 2",
+                    "sensorType": 2
+                },
+                {
+                    "sensorZone": 2,
+                    "sensorLocation": 3,
+                    "serialNumber": "CE:2B:42:24:B3",
+                    "macAddress": "X000A1617F",
+                    "sensorName": "Sensor 3",
+                    "sensorType": 1
+                },
+                {
+                    "sensorZone": 3,
+                    "sensorLocation": 2,
+                    "serialNumber": "BE:4C:22:FV:BB",
+                    "macAddress": "X000A1214E",
+                    "sensorName": "Sensor 4",
+                    "sensorType": 3
+                },
+                {
+                    "sensorZone": 3,
+                    "sensorLocation": 1,
+                    "serialNumber": "3A:28:4A:A1:EE",
+                    "macAddress": "X000A1254V",
+                    "sensorName": "Sensor 5",
+                    "sensorType": 2
+                }
+            ]
+        }
+    ],
+    "requestDetails": [
+        {
+            "vID": "1.1.1",
+            "mobileAppID": 4,
+            "messageType": 60
+        }
+    ],
+    "userDetails": [
+        {
+            "userID": 2210345
+        }
+    ]
+}
