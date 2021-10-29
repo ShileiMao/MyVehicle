@@ -47,6 +47,7 @@ struct VehiclePersistence {
                 vehicle.name = newVehicle.name
                 vehicle.reeferSerial = newVehicle.reeferSerial
                 vehicle.customer = newVehicle.customer
+                vehicle.mobileNumber = newVehicle.mobileNumber
             })
         }
     }
